@@ -32,7 +32,7 @@ export default function Todos({todos, onAddTodo}) {
                     <h1 className="text-xl font-bold text-center text-gray-800 dark:text-white truncate">{todo.title}</h1>
                     <p className="text-center text-gray-600 dark:text-gray-400 truncate">{todo.description}</p>
                     <div className="mt-4 flex justify-center">
-                        <button onClick={() => handleMarkAsDone(index)} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md mx-2">
+                        <button onClick={() => handleMarkAsDone(index)} className={`px-4 py-2 ${todo.done ? "bg-green-500 hover:bg-green-600": "bg-blue-500 hover:bg-blue-600"} text-white rounded-md mx-2`}>
                             {todo.done ? "completed" : "done"}
                         </button>
                         <button onClick={() => handleDelete(index)} className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md mx-2">
